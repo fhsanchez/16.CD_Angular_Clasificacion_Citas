@@ -1,0 +1,20 @@
+<p>new-quote-ranks works!</p>
+<h1>Quote Ranks</h1>
+<div>
+  <a [routerLink]="['/home']">Home</a>
+
+  <label>Provide a quote by:</label>
+</div>
+
+<br>
+
+<form (submit)="onSubmit()">
+  <div>
+    <label>Quote:</label>
+    <input type="text" name="name" id="name" [(ngModel)]="newQuote.description" required>
+  </div>
+  <div>
+    <button [routerLink]="['/home']">Cancel</button>
+    <input type="submit" value="Submit" />
+  </div>
+</form>

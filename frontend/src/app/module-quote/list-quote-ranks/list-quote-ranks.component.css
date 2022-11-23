@@ -1,0 +1,23 @@
+.links a {
+  margin-right: 50px;
+}
+
+
+
+table {
+  border: 1px solid blue;
+  width: 550px;
+}
+thead {
+  background-color: aqua;
+  text-align: center;
+  height: 40px;
+}
+
+table tr td{
+  height: 25px;
+}
+
+.nombre_quote{
+   width: 200px;
+}

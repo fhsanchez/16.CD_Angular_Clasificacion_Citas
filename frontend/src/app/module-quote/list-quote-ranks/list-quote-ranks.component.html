@@ -1,0 +1,29 @@
+<h1>Quote Ranks</h1>
+
+<hr>
+<div class="links">
+  <a [routerLink]="['/home']">Home</a>
+
+  <a [routerLink]="['/newquote', authors.id]">Add a quote</a>
+  <br>
+  <label>Quotes by </label>
+</div>
+<table>
+  <thead>
+    <td class="nombre_quote">Quote</td>
+    <td>Votes</td>
+    <td>Actions available</td>
+  </thead>
+  <!-- detalle-->
+  <tr *ngFor="let quote of listQuotes.quotes">
+    <td class="name">{{quote.description}}</td>
+    <td class="name"><label name="lblRank">{{quote.rank}}</label></td>
+    <td>
+      <button (click)="voteUpQuote(quote._id, quote.rank+1)">Vote Up</button>
+      <button (click)="voteDownQuote(quote._id, quote.rank-1)">Vote Dowrn</button>
+      <button (click)="deleteQuote(quote._id)">Delete</button>
+
+    </td>
+
+  </tr>
+</table>
